@@ -32,8 +32,8 @@ Cryptocurrency exchanges experience high volumes of orders, often in the million
     - Use of in-memory databases or caching layers for frequently accessed data.
     - Using Async processing to handle incoming orders and matching in parallel.
 - How will you handle **concurrent operations** (e.g., order placements, cancellations, and matching)?
-        - Using proper locking mechanisms or optimistic concurrency control to ensure data integrity without significant performance hits.
-        - If working with Python ensure GIL is considered and possibly use multiprocessing or async frameworks to handle concurrency.
+    - Using proper locking mechanisms or optimistic concurrency control to ensure data integrity without significant performance hits.
+    - If working with Python ensure GIL is considered and possibly use multiprocessing or async frameworks to handle concurrency.
 - Use PyPi as interpreter for code execution for faster performance.
 
 **Considerations**:
