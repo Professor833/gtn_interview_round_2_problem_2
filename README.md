@@ -25,8 +25,16 @@ Cryptocurrency exchanges experience high volumes of orders, often in the million
 
 **Key Challenges**:
 - How will you design the system to **scale horizontally** to handle an increasing number of trading pairs and users without degrading performance?
+    - ANS: In memory data structures or databases will you use to ensure **fast access** to the order book
+    - ANS: Each trading pair will have its own order book to reduce contention and improve performance.
 - What optimizations can be made to minimize **latency** and maximize throughput for real-time order matching?
+    - Co-location of services to reduce network latency.
+    - Use of in-memory databases or caching layers for frequently accessed data.
+    - Using Async processing to handle incoming orders and matching in parallel.
 - How will you handle **concurrent operations** (e.g., order placements, cancellations, and matching)?
+        - Using proper locking mechanisms or optimistic concurrency control to ensure data integrity without significant performance hits.
+        - If working with Python ensure GIL is considered and possibly use multiprocessing or async frameworks to handle concurrency.
+- Use PyPi as interpreter for code execution for faster performance.
 
 **Considerations**:
 - Sharding or partitioning the order book for different trading pairs.
